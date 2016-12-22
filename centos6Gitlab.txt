@@ -2,8 +2,8 @@
 https://about.gitlab.com/downloads/archives/
 
 安装教程：
-https://my.oschina.net/secyaher/blog/280394
-http://www.centoscn.com/image-text/install/2015/0320/4929.html
+##https://my.oschina.net/secyaher/blog/280394
+##http://www.centoscn.com/image-text/install/2015/0320/4929.html
 http://www.01happy.com/centos-6-5-install-gitlab/
 centos6.5 docker
 
