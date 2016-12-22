@@ -1,0 +1,57 @@
+软件下载地址：
+https://about.gitlab.com/downloads/archives/
+
+安装教程：
+https://my.oschina.net/secyaher/blog/280394
+http://www.centoscn.com/image-text/install/2015/0320/4929.html
+http://www.01happy.com/centos-6-5-install-gitlab/
+centos6.5 docker
+
+yum -y install openssh-server passwd.x86_64
+sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+passwd
+/usr/sbin/sshd
+
+yum -y install crontabs.noarch
+yum -y install vim*
+
+yum -y install openssh-server postfix
+rpm -ivh gitlab-ce-7.10.4-omnibus-1.x86_64.rpm
+
+
+
+gitlab: Thank you for installing GitLab!
+gitlab: Configure and start GitLab by running the following command:
+gitlab: 
+gitlab: sudo gitlab-ctl reconfigure
+gitlab: 
+gitlab: GitLab should be reachable at http://2db59e268cf0
+gitlab: Otherwise configure GitLab for your system by editing /etc/gitlab/gitlab.rb file
+gitlab: And running reconfigure again.
+gitlab: 
+gitlab: For a comprehensive list of configuration options please see the Omnibus GitLab readme
+gitlab: https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md
+gitlab: 
+gitlab: 
+gitlab: If you just upgraded from GitLab 7.9 or earlier, please run the following
+gitlab: command:
+gitlab: 
+gitlab: sudo ln -sf   /opt/gitlab/bin/gitlab-ctl   /opt/gitlab/bin/gitlab-rake   /opt/gitlab/bin/gitlab-rails   /opt/gitlab/bin/gitlab-ci-rake   /opt/gitlab/bin/gitlab-ci-rails  /usr/bin/
+
+
+
+gitlab-ctl reconfigure
+lokkit -s http -s ssh
+gitlab-ctl status
+
+run: nginx: (pid 3012) 53s; run: log: (pid 3011) 53s
+run: postgresql: (pid 2857) 87s; run: log: (pid 2856) 87s
+run: redis: (pid 2759) 98s; run: log: (pid 2758) 98s
+run: sidekiq: (pid 2967) 60s; run: log: (pid 2966) 60s
+run: unicorn: (pid 2938) 66s; run: log: (pid 2937) 66s
+
+说明安装成功。
+
+通过浏览器访问：http://localhost   或者  http://ip
